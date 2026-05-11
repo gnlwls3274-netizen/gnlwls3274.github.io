@@ -343,3 +343,45 @@ body.light .pagination .active-page {
 
   color: white;
 }
+.circle-icon {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  background-color: #111111;
+
+  border: 1px solid #444444;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.circle-icon i {
+  color: white;
+
+  font-size: 24px;
+}
+
+.circle-icon:hover {
+  transform: scale(1.08);
+
+  background-color: #222222;
+}
+
+/* LIGHT MODE */
+
+body.light .circle-icon {
+  background-color: white;
+
+  border: 1px solid #999999;
+}
+
+body.light .circle-icon i {
+  color: #111111;
+}
