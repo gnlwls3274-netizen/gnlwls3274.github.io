@@ -7,10 +7,18 @@
 
   <title>Julie Archive</title>
 
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+  <!-- HEADER -->
 
   <header class="top-header">
 
@@ -18,39 +26,68 @@
 
     <div class="header-right">
 
+      <!-- CLOCK -->
+
       <div id="clock" class="clock">
         2026.05.11 PM 02:46:00
       </div>
+
+      <!-- THEME TOGGLE -->
 
       <button id="themeToggle" class="theme-toggle">
         ☀️ / 🌙
       </button>
 
-      <a href="https://github.com/gnlwls3274-netizen" target="_blank">
-        🐱
+      <!-- GITHUB -->
+
+      <a
+        href="https://github.com/gnlwls3274-netizen"
+        target="_blank"
+        class="circle-icon"
+      >
+        <i class="fa-brands fa-github"></i>
       </a>
 
-      <a href="mailto:your-email@example.com">
-        ✉️
+      <!-- EMAIL -->
+
+      <a
+        href="mailto:your-email@example.com"
+        class="circle-icon"
+      >
+        <i class="fa-solid fa-envelope"></i>
       </a>
 
-      <a href="https://instagram.com/" target="_blank">
-        ◎
+      <!-- INSTAGRAM -->
+
+      <a
+        href="https://instagram.com/"
+        target="_blank"
+        class="circle-icon"
+      >
+        <i class="fa-brands fa-instagram"></i>
       </a>
 
     </div>
 
   </header>
 
+  <!-- LAYOUT -->
+
   <div class="layout">
 
+    <!-- SIDEBAR -->
+
     <aside class="sidebar">
+
+      <!-- PROFILE -->
 
       <div class="profile">
 
         <div class="profile-img"></div>
 
       </div>
+
+      <!-- MENU -->
 
       <nav class="menu">
 
@@ -78,11 +115,15 @@
 
     </aside>
 
+    <!-- CONTENT -->
+
     <main class="content">
 
       <section class="posts-section">
 
         <h2>Recent Posts</h2>
+
+        <!-- POST 1 -->
 
         <article class="post-card">
 
@@ -104,6 +145,8 @@
 
         </article>
 
+        <!-- POST 2 -->
+
         <article class="post-card">
 
           <div>
@@ -124,6 +167,8 @@
 
         </article>
 
+        <!-- POST 3 -->
+
         <article class="post-card">
 
           <div>
@@ -142,6 +187,8 @@
 
         </article>
 
+        <!-- POST 4 -->
+
         <article class="post-card">
 
           <div>
@@ -159,6 +206,8 @@
           </span>
 
         </article>
+
+        <!-- PAGINATION -->
 
         <div class="pagination">
 
@@ -185,6 +234,8 @@
     </main>
 
   </div>
+
+  <!-- SCRIPT -->
 
   <script src="script.js"></script>
 
