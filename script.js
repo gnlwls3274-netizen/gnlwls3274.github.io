@@ -10,14 +10,19 @@ function updateClock() {
   const minutes = String(now.getMinutes()).padStart(2, "0");
   const seconds = String(now.getSeconds()).padStart(2, "0");
 
-  const ampm = hours >= 12 ? "PM" : "AM";
-  hours = hours % 12 || 12;
-  hours = String(hours).padStart(2, "0");
+  const period = hours >= 12 ? "PM" : "AM";
 
-  clock.textContent = `${year}.${month}.${date} ${ampm} ${hours}:${minutes}:${seconds}`;
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
+  const formattedHours = String(hours).padStart(2, "0");
+
+  clock.textContent =
+    `${year}.${month}.${date} ${period} ${formattedHours}:${minutes}:${seconds}`;
 }
 
 setInterval(updateClock, 1000);
+
 updateClock();
 
 const themeToggle = document.getElementById("themeToggle");
