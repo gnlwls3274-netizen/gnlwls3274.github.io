@@ -6,21 +6,23 @@
 
 body {
   background-color: #0d0d0d;
-  color: #ffffff;
+  color: white;
   font-family: Arial, sans-serif;
+  transition: 0.3s;
 }
 
 .top-header {
   height: 110px;
-  padding: 0 36px;
-  border-bottom: 1px solid #3a3a3a;
+  border-bottom: 1px solid #333;
+  padding: 0 40px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .top-header h1 {
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 800;
 }
 
@@ -28,7 +30,24 @@ body {
   display: flex;
   align-items: center;
   gap: 22px;
+}
+
+.clock {
   font-size: 18px;
+  color: #dddddd;
+}
+
+.theme-toggle {
+  background-color: #111111;
+  color: white;
+
+  border: 1px solid #444;
+
+  border-radius: 30px;
+
+  padding: 10px 16px;
+
+  cursor: pointer;
 }
 
 .header-right a {
@@ -37,65 +56,62 @@ body {
   font-size: 30px;
 }
 
-.clock {
-  color: #eeeeee;
-  font-size: 18px;
-  white-space: nowrap;
-}
-
-.theme-toggle {
-  border: 1px solid #444;
-  background: #111;
-  color: white;
-  border-radius: 30px;
-  padding: 8px 14px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
 .layout {
   display: grid;
   grid-template-columns: 290px 1fr;
+
   min-height: calc(100vh - 110px);
 }
 
 .sidebar {
-  border-right: 1px solid #3a3a3a;
-  padding: 56px 32px;
+  border-right: 1px solid #333;
+
+  padding: 50px 30px;
 }
 
 .profile {
   display: flex;
   justify-content: center;
+
   margin-bottom: 45px;
 }
 
 .profile-img {
   width: 170px;
   height: 170px;
+
   border-radius: 50%;
-  background: radial-gradient(circle at center, #f1f1f1 0 18%, transparent 19%),
-              radial-gradient(circle at center bottom, #f1f1f1 0 33%, transparent 34%),
-              #222;
+
+  background-color: #222;
+
   border: 1px solid #444;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
+
   gap: 18px;
 }
 
 .menu a {
   color: white;
+
   text-decoration: none;
+
+  padding: 18px 22px;
+
+  border-radius: 10px;
+
   font-size: 20px;
   font-weight: 600;
-  padding: 18px 22px;
-  border-radius: 8px;
+
   display: flex;
   align-items: center;
+
   gap: 18px;
+
+  transition: 0.3s;
 }
 
 .menu a span {
@@ -104,98 +120,152 @@ body {
 
 .menu a.active,
 .menu a:hover {
-  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+  background-color: #1f1f1f;
 }
 
 .content {
-  padding: 38px 44px;
+  padding: 40px;
 }
 
 .posts-section h2 {
   font-size: 38px;
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #444;
+
+  margin-bottom: 30px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #333;
 }
 
 .post-card {
-  background: linear-gradient(135deg, #1c1c1c, #141414);
+  background-color: #1b1b1b;
+
   border: 1px solid #222;
-  border-radius: 10px;
-  padding: 34px 36px;
+
+  border-radius: 12px;
+
+  padding: 35px;
+
   margin-bottom: 20px;
-  min-height: 150px;
+
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+
+  transition: 0.3s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+
+  background-color: #222;
 }
 
 .post-card h3 {
-  font-size: 27px;
+  font-size: 28px;
+
   margin-bottom: 18px;
 }
 
 .post-card p {
+  color: #cccccc;
+
+  line-height: 1.7;
+
   font-size: 18px;
-  color: #cfcfcf;
-  line-height: 1.6;
 }
 
 .date {
-  color: #d0d0d0;
-  font-size: 18px;
+  color: #aaaaaa;
+
   white-space: nowrap;
-  margin-top: 10px;
 }
 
 .pagination {
   display: flex;
-  margin-top: 30px;
+
+  margin-top: 35px;
 }
 
 .pagination button {
   width: 70px;
   height: 52px;
-  background: #0f0f0f;
+
+  background-color: #111;
+
   color: white;
+
   border: 1px solid #444;
-  font-size: 22px;
+
+  font-size: 20px;
+
   cursor: pointer;
 }
 
 .pagination .active-page {
-  background: #333;
+  background-color: #333;
 }
+
+/* LIGHT MODE */
 
 body.light {
-  background: #f5f5f5;
-  color: #111;
+  background-color: #f5f5f5;
+  color: #111111;
 }
 
-body.light .top-header,
-body.light .sidebar,
-body.light .posts-section h2 {
-  border-color: #222;
+body.light .top-header {
+  border-bottom: 1px solid #cccccc;
 }
 
-body.light .post-card,
-body.light .menu a.active,
-body.light .menu a:hover {
-  background: #ffffff;
-  color: #111;
+body.light .sidebar {
+  border-right: 1px solid #cccccc;
 }
 
-body.light .post-card p,
-body.light .date,
 body.light .clock {
-  color: #333;
+  color: #111111;
 }
 
 body.light .header-right a {
-  color: #111;
+  color: #111111;
 }
 
 body.light .theme-toggle {
-  background: #fff;
-  color: #111;
+  background-color: white;
+  color: black;
+
+  border: 1px solid #cccccc;
+}
+
+body.light .menu a {
+  color: #111111;
+}
+
+body.light .menu a.active,
+body.light .menu a:hover {
+  background-color: #e6e6e6;
+}
+
+body.light .posts-section h2 {
+  border-bottom: 1px solid #cccccc;
+}
+
+body.light .post-card {
+  background-color: white;
+
+  border: 1px solid #dddddd;
+}
+
+body.light .post-card p {
+  color: #444444;
+}
+
+body.light .pagination button {
+  background-color: white;
+
+  color: black;
+
+  border: 1px solid #cccccc;
+}
+
+body.light .pagination .active-page {
+  background-color: #dddddd;
 }
